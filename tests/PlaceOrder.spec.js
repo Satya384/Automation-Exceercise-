@@ -9,4 +9,7 @@ test("Test Case to Place an Order", async ({browser})=>{
     await poManager.getLoginPage().gotoUrl(data.url);
     await poManager.getLoginPage().login(data.email, data.password);
     await poManager.getLoginPage().validateSuccessfulLogin();
+    await poManager.getAddToCart().addProductToCart(data.productName);
+    await poManager.getAddToCart().verifyAddedToCartMsg();
+    await poManager.getAddToCart().verifyProductDetailsInCart(data.productName);
 });
