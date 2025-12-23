@@ -12,4 +12,5 @@ test("Test Case to Place an Order", async ({browser})=>{
     await poManager.getAddToCart().addProductToCart(data.productName);
     await poManager.getAddToCart().verifyAddedToCartMsg();
     await poManager.getAddToCart().verifyProductDetailsInCart(data.productName);
+    await poManager.getCheckOutpage().verifyOrderDetailsInCheckOutPage(data.mobileNum, data.productName);
 });
