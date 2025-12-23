@@ -11,7 +11,7 @@ class LoginPage{
 
     async gotoUrl(url){
         await this.page.goto(url);
-        await this.page.waitForLoadState('networkidle');
+        // await this.page.waitForLoadState('networkidle');
     }
 
     async login(email,password){
@@ -19,13 +19,12 @@ class LoginPage{
         await this.emailTxtBox.fill(email);
         await this.pswdTxtBox.fill(password);
         await this.loginBtn.click();
-        await this.page.waitForLoadState('networkidle');
+        // await this.page.waitForLoadState('networkidle');
     }
 
     async validateSuccessfulLogin(){
         await this.expect(this.page).toHaveTitle("Automation Exercise");
         this.expect(await this.logoutBtn.isVisible()).toBeTruthy();
-        console.log("Susscessfully logged in");
     }
 }
 module.exports={LoginPage};
