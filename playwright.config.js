@@ -8,16 +8,16 @@ import { on } from 'node:process';
  */
 const config = ({
   testDir: './tests',
-  timeout:40*1000,
+  timeout:60*1000,
   expect:{
     timeout:40*1000
   },
   reporter:'html',
-  screenshot:on,
   trace:on,
+  screenshot:on,
   use:{
     browserName: 'chromium',
-    headless: false
+    headless: false,
   }
 });
 

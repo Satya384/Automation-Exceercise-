@@ -13,4 +13,9 @@ test("Test Case to Place an Order", async ({browser})=>{
     await poManager.getAddToCart().verifyAddedToCartMsg();
     await poManager.getAddToCart().verifyProductDetailsInCart(data.productName);
     await poManager.getCheckOutpage().verifyOrderDetailsInCheckOutPage(data.mobileNum, data.productName);
+        await poManager.getCheckOutpage().placeOrderFunction();
+
+    await poManager.getPaymentPage().enterCardDetails(data.cardName, data.cardNumber, data.cvv, data.expireMonth, data.expireYear);
+    await poManager.getPaymentPage().payAndConfirmOrder();
+
 });
