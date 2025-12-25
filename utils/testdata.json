@@ -3,5 +3,10 @@
     "email":"satya1test@gmail.com",
     "password":"TestTest",
     "productName":"Men Tshirt",
-    "mobileNum":"9090909090"
+    "mobileNum":"9090909090",
+    "cardName":"Test Name",
+    "cardNumber":"3467800845923006",
+    "cvv":"345",
+    "expireMonth":"09",
+    "expireYear":"2028"
 }

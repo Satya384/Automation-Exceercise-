@@ -26,7 +26,7 @@ class AddToCart{
         else{
             console.log("Item successfully added to cart");
         }
-        await this.page.waitForLoadState('networkidle');
+        // await this.page.waitForLoadState('networkidle');
     }
 
     async verifyAddedToCartMsg(){
