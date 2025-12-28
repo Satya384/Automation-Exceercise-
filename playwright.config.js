@@ -13,11 +13,10 @@ const config = ({
     timeout:40*1000
   },
   reporter:'html',
-  trace:on,
-  screenshot:on,
   use:{
+    screenshot: 'on',
     browserName: 'chromium',
-    headless: false,
+    headless: true,
   }
 });
 
