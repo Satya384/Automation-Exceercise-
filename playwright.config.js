@@ -15,7 +15,6 @@ const config = ({
   reporter:'html',
   use:{
     screenshot: 'on',
-    trace: 'on',
     browserName: 'chromium',
     headless: true,
   }
