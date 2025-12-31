@@ -14,12 +14,19 @@ const config = ({
   },
   reporter:'html',
   use:{
-    screenshot: 'on',
+    fullyParallel:true,
+    screenshot: 'only-on-failure',
     trace: 'on',
+    video:'retain-on-failure',
     browserName: 'chromium',
     headless: true,
-  }
+  },
+  projects:[
+    {name:'chromium',use:{browserName:'chromium'}},
+    {name:'firefox',use:{browserName:'firefox'}},
+    {name:'safari',use:{browserName:'webkit'}}
+  ]
 });
 
-module.exports=config
+module.exports=config;
 
